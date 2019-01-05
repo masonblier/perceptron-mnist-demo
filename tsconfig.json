@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "es2017",
+    "module": "amd",
+    "moduleResolution": "node",
+    "newLine": "LF",
+    "outFile": "build/index.js",
+    "sourceMap": true,
+    "jsx": "react",
+    "jsxFactory": "h",
+    "lib": [
+      "es2017",
+      "dom"
+    ],
+    "typeRoots": [
+      "./node_modules/@types"
+    ],
+  },
+  "include": [
+    "index.tsx"
+  ],
+  "exclude": [
+    ".git",
+    "node_modules"
+  ]
+}

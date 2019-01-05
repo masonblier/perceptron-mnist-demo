@@ -1,0 +1,146 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+body.dark {
+  background: #282828;
+  color: white;
+}
+a, a:visited {
+  color: #40ccff;
+}
+a:hover {
+  color: #70dcff;
+}
+
+.demo-value-canvas {
+  min-width: 56px;
+  min-height: 56px;
+  padding: 2px;
+  display: block;
+}
+canvas {
+  image-rendering: pixelated;
+}
+
+.demo-trainer {
+  display: flex;
+  justify-content: center;
+  min-height: 250px;
+}
+.demo-group {
+  margin: 10px;
+}
+.current-sample {
+  margin-right: 10px;
+}
+.outputs-sample {
+  margin-left: 10px;
+}
+.outputs-sample .demo-value-canvas {
+  min-width: 30px;
+  width: 30px;
+  height: 295px;
+}
+.demo-layers {
+  display: flex;
+  align-items: center;
+}
+.demo-layer-row {
+
+}
+.demo-layer-row-canvases {
+  display: flex;
+  max-width: 240px;
+  flex-wrap: wrap;
+}
+.demo-layer-perceptron-group {
+  display: flex;
+}
+.demo-layer-label {
+  text-align: center;
+}
+
+h1, h2 {
+  margin: 0;
+  padding: 0;
+  padding-top: 10px;
+  margin-bottom: 5px;
+}
+.blog-layout {
+  padding: 10px;
+  margin: auto;
+}
+
+.layout-comments svg {
+  text-align: center;
+  margin: auto;
+  display: block;
+}
+
+.layout-code {
+  font-family: monospace;
+  white-space: pre-wrap;
+  font-size: 14px;
+  min-width: 450px;
+  padding: 10px;
+}
+.layout-code > div {
+  min-height: 16px;
+}
+
+@media screen and (min-width: 1000px) {
+  .layout-group {
+    display: flex;
+    padding: 20px 0;
+  }
+  .layout-comments {
+    flex-shrink: 1;
+    flex-grow: 0;
+    min-width: 50%;
+    max-width: 700px;
+  }
+  .layout-code {
+    width: 50%;
+    box-sizing: border-box;
+    max-width: 750px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0;
+  }
+  .layout-code div {
+    flex-grow: 0;
+  }
+}
+
+
+@keyframes pulse {
+  from { fill: black; }
+  to   { fill: blue; }
+}
+@keyframes outputPulse {
+  0% { fill: red; }
+  25% { fill: black; }
+  50% { fill: green; }
+  75% { fill: black; }
+  100% { fill: red; }
+}
+.afc-i1, .afc-i2 {
+  animation: 2s ease-in 0s infinite alternate pulse;
+}
+.afc-i2 {
+  animation-delay: 2s;
+}
+.afc-o {
+  animation: 4s linear 0s infinite outputPulse;
+}
